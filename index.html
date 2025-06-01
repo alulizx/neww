@@ -1,192 +1,444 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Удивительный Подсолнух</title>
+    <title>Мерей той</title>
     <style>
+        /* Негізгі стильдер */
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Arial', sans-serif; /* Суреттегіге ұқсас шрифт */
             margin: 0;
             padding: 0;
-            background-color: #FFF8E1; /* Светло-кремовый фон, как утреннее солнце */
-            color: #5D4037; /* Глубокий коричневый, как семечки */
-            line-height: 1.6;
+            background-color: #fff9fb; /* Жалпы фон түсі - өте ашық қызғылт */
+            color: #333;
+            overflow-x: hidden; /* Көлденең жылжуды болдырмау */
         }
+
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: #FFC107; /* Ярко-желтый, как лепестки подсолнуха */
-            color: #fff;
-            padding: 2em 0;
-            text-align: center;
-            border-bottom: 5px solid #FFA000; /* Оранжевый, как сердцевина */
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8em;
-            text-shadow: 1px 1px 2px #5D4037;
-        }
-        .emoji-flower {
-            font-size: 3em;
-            display: block;
-            text-align: center;
-            margin-top: 0.5em;
-        }
-        nav {
-            background-color: #4CAF50; /* Зеленый, как стебель и листья */
-            padding: 0.5em 0;
-            text-align: center;
-        }
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-        nav ul li a:hover {
-            background-color: #388E3C; /* Темно-зеленый при наведении */
-        }
-        .main-content {
-            padding: 25px;
-            background-color: #FFFFFF;
-            margin-top: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .main-content h2 {
-            color: #FF8F00; /* Оранжевый для заголовков секций */
-            border-bottom: 2px solid #FFECB3; /* Светло-желтая линия под заголовком */
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        .main-content p {
-            margin-bottom: 15px;
-        }
-        .main-content ul {
-            list-style-position: inside;
-            padding-left: 0;
-        }
-        .main-content ul li {
-            margin-bottom: 8px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .gallery-item {
-            background-color: #FFFDE7; /* Очень светлый желтый для фото-карточек */
-            border: 1px solid #FFECB3; /* Граница для фото-карточек */
-            padding: 10px;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        }
-        .gallery-item img { /* Стиль для будущих изображений */
             max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-            margin-bottom: 8px;
         }
-        .gallery-item p {
-            font-size: 0.9em;
-            color: #795548; /* Коричневый для подписей */
+
+        section {
+            min-height: 100vh; /* Әр секция кемінде экран биіктігіндей */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Бірінші секция - Шақыру */
+        #invitation {
+            background-image: url('https://via.placeholder.com/1200x800.png?text=Фон+суреті+(сыйлықтар)'); /* Өз фон суретіңізді қойыңыз */
+            background-size: cover;
+            background-position: center;
+            color: #fff; /* Фон суретіне байланысты мәтін түсі */
+            position: relative;
+        }
+
+        #invitation::before { /* Фонды қараңғылау үшін */
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); /* Қараңғылау деңгейі */
+            z-index: 1;
+        }
+
+        #invitation > * {
+            position: relative;
+            z-index: 2;
+        }
+
+
+        #invitation .date-time {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #fce4ec; /* Ашық қызғылт */
+        }
+
+        #invitation h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            color: #FFB6C1; /* Ашық қызғылт (Нежно розовый) */
+            font-weight: bold;
+        }
+
+        #invitation .guest-greeting {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        #invitation .invitation-text {
+            font-size: 1.1em;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #f5f5f5;
+        }
+
+        .heart-icon {
+            font-size: 2em;
+            color: #FFB6C1; /* Ашық қызғылт */
+            margin-top: 20px;
+        }
+
+        /* Екінші секция - Той жайлы */
+        #details {
+            background-color: #fff; /* Ақ фон */
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+            position: relative;
+            padding-top: 60px; /* Декоративті сурет орны */
+        }
+
+        .decorative-flower {
+            display: block;
+            margin: 0 auto 20px auto;
+            width: 80px; /* Сурет өлшемі */
+            height: auto;
+        }
+
+        .info-block {
+            margin-bottom: 25px;
+        }
+
+        .info-block h3 {
+            font-size: 1.1em;
+            color: #777;
+            margin-bottom: 5px;
+            font-weight: normal;
+        }
+
+        .info-block p {
+            font-size: 1.4em;
+            color: #333;
             margin: 0;
         }
-        footer {
-            text-align: center;
-            padding: 25px;
-            margin-top: 30px;
-            background-color: #4CAF50; /* Зеленый футер */
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .countdown > div {
+            background-color: #fce4ec; /* Ашық қызғылт фон */
+            padding: 10px 15px;
+            border-radius: 8px;
+            min-width: 70px;
+        }
+
+        .countdown span {
+            display: block;
+            font-size: 2em;
+            color: #FFB6C1; /* Ашық қызғылт */
+            font-weight: bold;
+        }
+
+        .countdown small {
+            font-size: 0.8em;
+            color: #ad8590; /* Қоюлау қызғылт */
+        }
+
+        .map-button {
+            display: inline-block;
+            background-color: #FFB6C1; /* Ашық қызғылт */
             color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .map-button:hover {
+            background-color: #ff9 সরকারি; /* Аздап қою қызғылт */
+        }
+
+        /* Үшінші секция - RSVP және Күнтізбе */
+        #rsvp {
+            background-color: #fdf6f8; /* Өте ашық қызғылт фон */
+        }
+
+        .rsvp-prompt {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .rsvp-buttons {
+            margin-bottom: 30px;
+        }
+
+        .rsvp-button {
+            background-color: #FFB6C1; /* Ашық қызғылт */
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .rsvp-button.decline {
+            background-color: #f5c1cb; /* Сәл басқа реңк */
+            border: 1px solid #FFB6C1;
+            color: #FFB6C1;
+        }
+        .rsvp-button.decline:hover {
+             background-color: #FFB6C1;
+             color: white;
+        }
+
+
+        .rsvp-button:hover {
+            background-color: #ff9 সরকারি; /* Аздап қою қызғылт */
+        }
+
+        .participation-options {
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .calendar-container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            max-width: 350px;
+            width: 100%;
+        }
+
+        .calendar-header h4 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .calendar table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .calendar th, .calendar td {
+            padding: 8px;
+            text-align: center;
             font-size: 0.9em;
         }
 
-        /* Для очень маленьких экранов */
-        @media (max-width: 600px) {
-            header h1 {
+        .calendar th {
+            color: #777;
+        }
+
+        .calendar td {
+            color: #333;
+        }
+
+        .calendar .highlighted-day {
+            background-color: #FFB6C1; /* Ашық қызғылт */
+            color: white;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+         .calendar .empty-day {
+            color: #ccc; /* Бос күндер үшін */
+        }
+
+        /* Әуен қосу батырмасы */
+        .music-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFB6C1; /* Ашық қызғылт */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9em;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease;
+        }
+
+        .music-button:hover {
+            background-color: #ff9 সরকারি; /* Аздап қою қызғылт */
+        }
+
+         /* Адаптивтілік */
+        @media (max-width: 768px) {
+            #invitation h1 {
+                font-size: 2.5em;
+            }
+            .section-title {
                 font-size: 2em;
             }
-            nav ul li {
-                display: block;
-                margin: 10px 0;
+            .countdown {
+                flex-wrap: wrap; /* Кіші экрандарда қатарға сыймаса, төмен түседі */
             }
-            .gallery {
-                grid-template-columns: 1fr; /* Одна колонка для галереи */
+            .countdown > div {
+                min-width: 60px;
+                padding: 8px 10px;
+            }
+            .countdown span {
+                font-size: 1.5em;
+            }
+            .rsvp-button {
+                padding: 10px 20px;
+                font-size: 0.9em;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Солнечный Цветок: Подсолнух</h1>
-        <div class="emoji-flower">🌻</div>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">О цветке</a></li>
-            <li><a href="#facts">Интересные факты</a></li>
-            <li><a href="#gallery">Галерея</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
-        <section id="about" class="main-content">
-            <h2>Добро пожаловать на страницу о подсолнухе!</h2>
-            <p>Подсолнух — это не просто красивый цветок, это символ солнца, радости и лета. Его яркие лепестки и способность поворачиваться вслед за солнцем делают его одним из самых узнаваемых и любимых растений в мире.</p>
-            <p>На этой странице вы узнаете больше об этом удивительном создании природы.</p>
+        <section id="invitation">
+            <div class="date-time">16 қараша, сағат 15:00</div>
+            <h1>Мерей той</h1>
+            <p class="guest-greeting">Құрметті қонақтар!</p>
+            <p class="invitation-text">
+                Сіз(дер)ді Болаттың 60 жас мерей тойына арналған салтанатты ақ дастарханымыздың
+                қадірлі қонағы болуға шақырамыз.
+            </p>
+            <div class="heart-icon">♥</div>
         </section>
 
-        <section id="facts" class="main-content">
-            <h2>Интересные факты о подсолнухах</h2>
-            <ul>
-                <li>Научное название подсолнуха — <em>Helianthus annuus</em>. "Helianthus" происходит от греческих слов "helios" (солнце) и "anthos" (цветок).</li>
-                <li>Молодые подсолнухи обладают гелиотропизмом — они действительно поворачивают свои соцветия с востока на запад, следуя за движением солнца в течение дня. Ночью они возвращаются в исходное положение, чтобы встретить рассвет.</li>
-                <li>Подсолнух — это не один цветок, а целое соцветие, состоящее из множества мелких цветочков.</li>
-                <li>Семена подсолнуха очень питательны и используются для производства масла, халвы, козинаков, а также как корм для птиц.</li>
-                <li>Существуют тысячи сортов подсолнухов, различающихся по размеру, цвету лепестков (от классического желтого до красного и даже белого) и высоте стебля.</li>
-                <li>Самый высокий зарегистрированный подсолнух достигал более 9 метров в высоту!</li>
-            </ul>
+        <section id="details">
+            <img src="https://via.placeholder.com/80x80.png?text=Гүл" alt="Декоративті гүл" class="decorative-flower">
+            <h2 class="section-title">Той жайлы</h2>
+
+            <div class="info-block">
+                <h3>ТОЙ ИЕЛЕРІ:</h3>
+                <p>рр</p>
+            </div>
+
+            <div class="info-block">
+                <h3>ТОЙДЫҢ БАСТАЛУ УАҚЫТЫ:</h3>
+                <p>16.11.2025 / сағат 15:00</p>
+            </div>
+
+            <div class="info-block">
+                <h3>ТОЙДЫҢ БАСТАЛУЫНА ҚАЛДЫ:</h3>
+                <div class="countdown">
+                    <div><span id="days">0</span><small>КҮН</small></div>
+                    <div><span id="hours">0</span><small>САҒАТ</small></div>
+                    <div><span id="minutes">0</span><small>МИНУТ</small></div>
+                    <div><span id="seconds">0</span><small>СЕКУНД</small></div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>ТОЙДЫҢ МЕКЕН-ЖАЙЫ:</h3>
+                <p>Алматы қаласы</p>
+                <p>Ресторан</p>
+            </div>
+
+            <a href="https://2gis.kz/almaty/search/Ресторан%20Абиба" target="_blank" class="map-button">2GIS-тен қарау ></a>
         </section>
 
-        <section id="gallery" class="main-content">
-            <h2>Галерея Подсолнухов</h2>
-            <p>Здесь могли бы быть ваши фотографии или рисунки подсолнухов. Пока что — текстовые описания:</p>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <p>Яркое поле цветущих подсолнухов под голубым небом.</p>
+        <section id="rsvp">
+            <img src="https://via.placeholder.com/80x80.png?text=Гүл" alt="Декоративті гүл" class="decorative-flower">
+            <h2 class="section-title">Құрметті қонақ,</h2>
+            <p class="rsvp-prompt">тойға келетініңізді растаңыз</p>
+
+            <div class="rsvp-buttons">
+                <a href="mailto:example@example.com?subject=Тойға%20келемін%20(Мерей%20той)&body=Мен%20тойға%20келетінімді%20растаймын." class="rsvp-button">✓ Келемін</a>
+                <a href="mailto:example@example.com?subject=Тойға%20келе%20алмаймын%20(Мерей%20той)&body=Өкінішке%20орай,%20тойға%20келе%20алмаймын." class="rsvp-button decline">✗ Келе алмаймын</a>
+            </div>
+
+            <p class="participation-options">Выберите вариант участия ▾</p>
+
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h4>Қараша 2025</h4>
                 </div>
-                <div class="gallery-item">
-                    <p>Крупный план соцветия подсолнуха с пчелой.</p>
-                </div>
-                <div class="gallery-item">
-                    <p>Силуэт подсолнуха на фоне заходящего солнца.</p>
+                <div class="calendar">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Дс</th><th>Сс</th><th>Ср</th><th>Бс</th><th>Жм</th><th>Сб</th><th>Жс</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td>1</td><td>2</td>
+                            </tr>
+                            <tr>
+                                <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+                            </tr>
+                            <tr>
+                                <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td class="highlighted-day">16</td>
+                            </tr>
+                            <tr>
+                                <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+                            </tr>
+                            <tr>
+                                <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Сайт о Подсолнухе. Создано с любовью к природе!</p>
-    </footer>
+    <button class="music-button" onclick="alert('Әуен қосу функциясы әзірленуде :)')">Әуен қосу</button>
+
+    <script>
+        // Кері санақ таймері
+        const countdownDate = new Date("November 16, 2025 15:00:00").getTime();
+
+        const countdownFunction = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? '0' + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? '0' + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? '0' + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? '0' + seconds : seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                // Қаласаңыз, той басталғаны туралы хабарлама қосуға болады
+            }
+        }, 1000);
+
+        // Плавный скролл (қажет болса)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
 
 </body>
 </html>

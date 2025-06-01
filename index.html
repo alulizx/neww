@@ -7,12 +7,12 @@
     <style>
         /* Негізгі стильдер */
         body {
-            font-family: 'Arial', sans-serif; /* Суреттегіге ұқсас шрифт */
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff9fb; /* Жалпы фон түсі - өте ашық қызғылт */
+            background-color: #fff9fb;
             color: #333;
-            overflow-x: hidden; /* Көлденең жылжуды болдырмау */
+            overflow-x: hidden;
         }
 
         .container {
@@ -20,7 +20,7 @@
         }
 
         section {
-            min-height: 100vh; /* Әр секция кемінде экран биіктігіндей */
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -30,23 +30,23 @@
             text-align: center;
         }
 
-        /* Бірінші секция - Шақыру */
+        /* Шақыру секциясы */
         #invitation {
-            background-image: url('https://via.placeholder.com/1200x800.png?text=Фон+суреті+(сыйлықтар)'); /* Өз фон суретіңізді қойыңыз */
+            background-image: url('https://via.placeholder.com/1200x800.png?text=Фон+суреті+(сыйлықтар)');
             background-size: cover;
             background-position: center;
-            color: #fff; /* Фон суретіне байланысты мәтін түсі */
+            color: #fff;
             position: relative;
         }
 
-        #invitation::before { /* Фонды қараңғылау үшін */
+        #invitation::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.4); /* Қараңғылау деңгейі */
+            background-color: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
@@ -55,17 +55,16 @@
             z-index: 2;
         }
 
-
         #invitation .date-time {
             font-size: 1.2em;
             margin-bottom: 20px;
-            color: #fce4ec; /* Ашық қызғылт */
+            color: #fce4ec;
         }
 
         #invitation h1 {
             font-size: 3.5em;
             margin-bottom: 20px;
-            color: #FFB6C1; /* Ашық қызғылт (Нежно розовый) */
+            color: #FFB6C1;
             font-weight: bold;
         }
 
@@ -85,13 +84,13 @@
 
         .heart-icon {
             font-size: 2em;
-            color: #FFB6C1; /* Ашық қызғылт */
+            color: #FFB6C1;
             margin-top: 20px;
         }
 
-        /* Екінші секция - Той жайлы */
+        /* Той жайлы ақпарат */
         #details {
-            background-color: #fff; /* Ақ фон */
+            background-color: #fff;
         }
 
         .section-title {
@@ -99,13 +98,13 @@
             color: #333;
             margin-bottom: 10px;
             position: relative;
-            padding-top: 60px; /* Декоративті сурет орны */
+            padding-top: 60px;
         }
 
         .decorative-flower {
             display: block;
             margin: 0 auto 20px auto;
-            width: 80px; /* Сурет өлшемі */
+            width: 80px;
             height: auto;
         }
 
@@ -134,7 +133,7 @@
         }
 
         .countdown > div {
-            background-color: #fce4ec; /* Ашық қызғылт фон */
+            background-color: #fce4ec;
             padding: 10px 15px;
             border-radius: 8px;
             min-width: 70px;
@@ -143,18 +142,18 @@
         .countdown span {
             display: block;
             font-size: 2em;
-            color: #FFB6C1; /* Ашық қызғылт */
+            color: #FFB6C1;
             font-weight: bold;
         }
 
         .countdown small {
             font-size: 0.8em;
-            color: #ad8590; /* Қоюлау қызғылт */
+            color: #ad8590;
         }
 
         .map-button {
             display: inline-block;
-            background-color: #FFB6C1; /* Ашық қызғылт */
+            background-color: #FFB6C1;
             color: white;
             padding: 12px 25px;
             text-decoration: none;
@@ -165,12 +164,12 @@
         }
 
         .map-button:hover {
-            background-color: #ff9 সরকারি; /* Аздап қою қызғылт */
+            background-color: #ff8da1;
         }
 
-        /* Үшінші секция - RSVP және Күнтізбе */
+        /* RSVP секциясы */
         #rsvp {
-            background-color: #fdf6f8; /* Өте ашық қызғылт фон */
+            background-color: #fdf6f8;
         }
 
         .rsvp-prompt {
@@ -184,7 +183,7 @@
         }
 
         .rsvp-button {
-            background-color: #FFB6C1; /* Ашық қызғылт */
+            background-color: #FFB6C1;
             color: white;
             border: none;
             padding: 12px 25px;
@@ -193,10 +192,12 @@
             font-size: 1em;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
         }
 
         .rsvp-button.decline {
-            background-color: #f5c1cb; /* Сәл басқа реңк */
+            background-color: #f5c1cb;
             border: 1px solid #FFB6C1;
             color: #FFB6C1;
         }
@@ -205,9 +206,8 @@
              color: white;
         }
 
-
         .rsvp-button:hover {
-            background-color: #ff9 সরকারি; /* Аздап қою қызғылт */
+            background-color: #ff8da1;
         }
 
         .participation-options {
@@ -250,21 +250,21 @@
         }
 
         .calendar .highlighted-day {
-            background-color: #FFB6C1; /* Ашық қызғылт */
+            background-color: #FFB6C1;
             color: white;
             border-radius: 50%;
             font-weight: bold;
         }
          .calendar .empty-day {
-            color: #ccc; /* Бос күндер үшін */
+            color: #ccc;
         }
 
-        /* Әуен қосу батырмасы */
+        /* Әуен батырмасы */
         .music-button {
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #FFB6C1; /* Ашық қызғылт */
+            background-color: #FFB6C1;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -277,10 +277,10 @@
         }
 
         .music-button:hover {
-            background-color: #ff9 সরকারি; /* Аздап қою қызғылт */
+            background-color: #ff8da1;
         }
 
-         /* Адаптивтілік */
+        /* Адаптивтік */
         @media (max-width: 768px) {
             #invitation h1 {
                 font-size: 2.5em;
@@ -289,7 +289,7 @@
                 font-size: 2em;
             }
             .countdown {
-                flex-wrap: wrap; /* Кіші экрандарда қатарға сыймаса, төмен түседі */
+                flex-wrap: wrap;
             }
             .countdown > div {
                 min-width: 60px;
@@ -309,11 +309,12 @@
 
     <div class="container">
         <section id="invitation">
-            <div class="date-time">16 қараша, сағат 15:00</div>
+            <div class="date-time">12 тамыз, сағат 19:00</div>
             <h1>Мерей той</h1>
             <p class="guest-greeting">Құрметті қонақтар!</p>
             <p class="invitation-text">
-                Сіз(дер)ді
+                Сіз(дер)ді Болаттың 60 жас мерей тойына арналған салтанатты ақ дастарханымыздың
+                қадірлі қонағы болуға шақырамыз.
             </p>
             <div class="heart-icon">♥</div>
         </section>
@@ -324,12 +325,12 @@
 
             <div class="info-block">
                 <h3>ТОЙ ИЕЛЕРІ:</h3>
-                <p>рр</p>
+                <p>Ерасыл & Гаухар</p>
             </div>
 
             <div class="info-block">
                 <h3>ТОЙДЫҢ БАСТАЛУ УАҚЫТЫ:</h3>
-                <p>16.11.2025 / сағат 15:00</p>
+                <p>12.08.2025 / сағат 19:00</p>
             </div>
 
             <div class="info-block">
@@ -345,7 +346,7 @@
             <div class="info-block">
                 <h3>ТОЙДЫҢ МЕКЕН-ЖАЙЫ:</h3>
                 <p>Алматы қаласы</p>
-                <p>Ресторан</p>
+                <p>Ресторан Абиба</p>
             </div>
 
             <a href="https://2gis.kz/almaty/search/Ресторан%20Абиба" target="_blank" class="map-button">2GIS-тен қарау ></a>
@@ -357,15 +358,15 @@
             <p class="rsvp-prompt">тойға келетініңізді растаңыз</p>
 
             <div class="rsvp-buttons">
-    <a href="https://wa.me/77714944921?text=Құрметті%20той%20иелері,%20Мерей%20тойыңызға%20келетінімді%20растаймын!" class="rsvp-button">✓ Келемін</a>
-    <a href="https://wa.me/77714944921?text=Құрметті%20той%20иелері,%20Өкінішке%20орай,%20Мерей%20тойыңызға%20келе%20алмаймын." class="rsvp-button decline">✗ Келе алмаймын</a>
-</div>
+                <a href="https://wa.me/77071234567?text=Құрметті%20той%20иелері,%20Мерей%20тойыңызға%20келетінімді%20растаймын!" class="rsvp-button">✓ Келемін</a>
+                <a href="https://wa.me/77071234567?text=Құрметті%20той%20иелері,%20Өкінішке%20орай,%20Мерей%20тойыңызға%20келе%20алмаймын." class="rsvp-button decline">✗ Келе алмаймын</a>
+            </div>
 
             <p class="participation-options">Выберите вариант участия ▾</p>
 
             <div class="calendar-container">
                 <div class="calendar-header">
-                    <h4>Қараша 2025</h4>
+                    <h4>Тамыз 2025</h4>
                 </div>
                 <div class="calendar">
                     <table>
@@ -376,19 +377,19 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td>1</td><td>2</td>
+                                <td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td class="empty-day"></td><td>1</td><td>2</td><td>3</td>
                             </tr>
                             <tr>
-                                <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+                                <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td>
                             </tr>
                             <tr>
-                                <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td class="highlighted-day">16</td>
+                                <td>11</td><td class="highlighted-day">12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td>
                             </tr>
                             <tr>
-                                <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+                                <td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td>
                             </tr>
                             <tr>
-                                <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+                                <td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td>
                             </tr>
                         </tbody>
                     </table>
@@ -400,8 +401,8 @@
     <button class="music-button" onclick="alert('Әуен қосу функциясы әзірленуде :)')">Әуен қосу</button>
 
     <script>
-        // Кері санақ таймері
-        const countdownDate = new Date("November 16, 2025 15:00:00").getTime();
+        // Кері санақ таймері (12 тамыз 2025, 19:00)
+        const countdownDate = new Date("August 12, 2025 19:00:00").getTime();
 
         const countdownFunction = setInterval(function() {
             const now = new Date().getTime();
@@ -423,11 +424,10 @@
                 document.getElementById("hours").innerText = "00";
                 document.getElementById("minutes").innerText = "00";
                 document.getElementById("seconds").innerText = "00";
-                // Қаласаңыз, той басталғаны туралы хабарлама қосуға болады
             }
         }, 1000);
 
-        // Плавный скролл (қажет болса)
+        // Плавный скролл
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -436,7 +436,6 @@
                 });
             });
         });
-
     </script>
 
 </body>

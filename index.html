@@ -168,7 +168,7 @@
         }
 
         /* RSVP секциясы */
-        #rsvp {
+         #rsvp {
             background-color: #fdf6f8;
         }
 
@@ -180,34 +180,35 @@
 
         .rsvp-buttons {
             margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
         }
 
-        .rsvp-button {
+        .rsvp-option {
+            display: flex;
+            align-items: center;
             background-color: #FFB6C1;
             color: white;
-            border: none;
             padding: 12px 25px;
-            margin: 0 10px;
             border-radius: 25px;
             font-size: 1em;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
+            width: 200px;
+            justify-content: center;
         }
 
-        .rsvp-button.decline {
-            background-color: #f5c1cb;
-            border: 1px solid #FFB6C1;
-            color: #FFB6C1;
-        }
-        .rsvp-button.decline:hover {
-             background-color: #FFB6C1;
-             color: white;
-        }
-
-        .rsvp-button:hover {
+        .rsvp-option:hover {
             background-color: #ff8da1;
+            transform: scale(1.05);
+        }
+
+        .rsvp-option .checkmark {
+            margin-right: 10px;
+            font-size: 1.2em;
         }
 
         .participation-options {
@@ -352,14 +353,18 @@
         </section>
 
         <section id="rsvp">
-            <img src="https://via.placeholder.com/80x80.png?text=Гүл" alt="Декоративті гүл" class="decorative-flower">
-            <h2 class="section-title">Құрметті қонақ,</h2>
-            <p class="rsvp-prompt">тойға келетініңізді растаңыз</p>
+        <img src="https://via.placeholder.com/80x80.png?text=Гүл" alt="Декоративті гүл" class="decorative-flower">
+        <h2 class="section-title">Құрметті қонақ,</h2>
+        <p class="rsvp-prompt">тойға келетініңізді растаңыз</p>
 
-            <div class="rsvp-buttons">
-                <a href="https://wa.me/77071234567?text=Құрметті%20той%20иелері,%20Мерей%20тойыңызға%20келетінімді%20растаймын!" class="rsvp-button">✓ Келемін</a>
-                <a href="https://wa.me/77071234567?text=Құрметті%20той%20иелері,%20Өкінішке%20орай,%20Мерей%20тойыңызға%20келе%20алмаймын." class="rsvp-button decline">✗ Келе алмаймын</a>
-            </div>
+        <div class="rsvp-buttons">
+            <a href="https://wa.me/77714944921?text=Құрметті%20той%20иелері,%20Мерей%20тойыңызға%20келетінімді%20растаймын!" class="rsvp-option">
+                <span class="checkmark">✓</span> Келемін
+            </a>
+            <a href="https://wa.me/77714944921?text=Құрметті%20той%20иелері,%20Мерей%20тойыңызға%20қатынамын!" class="rsvp-option">
+                <span class="checkmark">✓</span> Келе алмаймын
+            </a>
+        </div>
 
             <p class="participation-options">Выберите вариант участия ▾</p>
 
